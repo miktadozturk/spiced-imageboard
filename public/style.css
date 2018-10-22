@@ -1,0 +1,211 @@
+* {
+    font-family: ubuntu;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #7C63E8;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#main {
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-left: 40px;
+    background-color: white;
+    padding: 10px;
+    width: 240px;
+    height: 20px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: right;
+    padding-right: 40px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+h2 span {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+p {
+    font-size: 24px;
+    color: blue;
+    padding-top: 20px;
+}
+
+img {
+    width: 350px;
+    height: 250px;
+}
+
+#uploadFile {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-left: 40px;
+    background-color: white;
+    padding: 10px;
+    width: 240px;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-box {
+    border-left: 5px solid #7C93E8;
+    border-top: 5px solid #7C93E8;
+    border-right: 5px solid #7C93E8;
+    border-bottom: 5px solid #7C93E8;
+    background-color: #7C93E8;
+    position: fixed;
+    height: 500px;
+    width: 1150px;
+    margin: 50px;
+    text-align: left;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: stretch;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.image-post {
+    flex: 3 0 0;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.comments-post {
+    flex: 1 0 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.shown-comments {
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    width: 400px;
+}
+
+.comment-fields {
+    align-self: flex-end;
+}
+
+.modal-box h1 {
+    color: white;
+    right: 10px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.modal-box img {
+    height: 280px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.img-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagebox {
+    width: 350px;
+    height: 350px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    display: inline-block;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.commentusername {
+    width: 250px;
+    height: 20px;
+    margin-left: 95px;
+}
+
+.comment {
+    width: 350px;
+    height: 100px;
+}
+
+.commentsubmit {
+    width: 100px;
+    height: 32px;
+    font-size: 18px;
+    border-radius: 3px;
+    margin-left: 175px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.p-title {
+    font-size: 25px;
+    color: #CEEBEE;
+}
+
+.p-author {
+    font-size: 15px;
+    padding: 0px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.p-desc {
+    margin: 10px;
+    font-size: 14px;
+    color: black;
+}

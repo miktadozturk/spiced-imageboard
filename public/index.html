@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Photo Gallery | ImageBoard</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <img src="img/icon.png" alt="" class="logo">
+        <h1>{{heading}}</h1>
+        <image-modal v-if="imageID" :id="imageID" v-on:close2="close3"></image-modal>
+        <input name="title" v-model="title" placeholder="Title" autocomplete="off">
+        <input name="desc" v-model="desc" placeholder="Description your Photo" autocomplete="off">
+        <input name="username" v-model="username" placeholder="Write your Username" autocomplete="off">
+        <input id="uploadFile" name="file" type="file" accept="image/*" @change="handleFileChange">
+        <button @click="upload">Upload</button>
+
+        <div class="img-container">
+            <div class="imagebox" v-for="image in images" :key="image.id">
+                <img v-bind:src="image.url" @click="openModal(image.id)"><p>{{image.title}}</p></img>
+            </div>
+        </div>
+
+        <button v-if="hasMore" @click="getMore">More Photo</button>
+    </div>
+
+
+    <script id="image-modal" type="text/x-template">
+        <div class="modal-box">
+
+            <div class="image-post">
+                <img :src="url">
+                <p class="p-title">{{title}}</p>
+                <p class="p-desc">{{description}}</p>
+                <p class="p-author">Created by {{username}} on {{created_at}}</p>
+            </div>
+
+            <div class="comments-post">
+                <div class="shown-comments">
+                    <div v-for="comment in comments">
+                        <p class="p-desc">{{comment.comment}}</p>
+                        <p class="p-author">{{comment.username}} on {{created_at}}</p>
+                    </div>
+                </div>
+                <div class="comment-fields">
+                    <input name="commenter" class="commentusername" v-model="commenter" placeholder="Username" autocomplete="off" required>
+                    <input name="commentfield" class="comment" v-model="commentfield" placeholder="Write your Comments" autocomplete="off" required>
+                    <button @click="submitcomment" class="commentsubmit">Submit</button>
+                </div>
+            </div>
+
+            <h2><span @click="close1">close</span></h2>
+        </div>
+
+    </script>
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
